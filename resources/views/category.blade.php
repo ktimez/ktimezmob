@@ -71,14 +71,14 @@
 <!--================== CONTENT===============-->
 <div class="container" style="border:0px solid ;padding:0px 15px;margin-top:2px;background-color:#f8f8f8;">
 <div class="row" style="padding:4px 0px;margin-top:3px;margin-left:0px;margin-right:0px;border-top:0px solid #03a9f4;border-bottom:1px solid #1562b6;background-color:#f8f8f8;color:#007ac1;">
-<div class="col-xs-12" style="padding-left:3px;font-size:17px;text-transform:uppercase;">Category Name</div>
+<div class="col-xs-12" style="padding-left:3px;font-size:17px;text-transform:uppercase;">{{$category_name}}</div>
 </div>
 <div class="row"  style="padding:2px 2px;margin:0px -15px;">
 <div class="col-lg-12"  style="padding:4px 0px;">
 <div class="title_rubrique" >
 <a href="#" style="font-size:16px;font-weight:bold;color:#03a9f4;">Ikigo kiranguza internet mu Rwanda cyahembye abanyeshuri b’abanyempano mu by’ubugeni  </a>
 </div>
-<img src="images/abagera.jpg" width="100%"  style="height:100%" /> 
+<img src="{{asset('images/abagera.jpg')}}" width="100%"  style="height:100%" /> 
 </div>
 </div>
 <div class="row" style="margin:0px -20px;">
