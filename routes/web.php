@@ -11,12 +11,10 @@
 |
 */
 
-Route::get('/',['as'=>'home','uses'=>'HomeController@index']);
+Route::get('/',['as'=>'home','uses'=>'MobileWebController@index']);
 
-Route::get('category/{catname?}', function($catname = null){
-    return view('category')->with(['category_name'=>$catname]);
-});
+Route::get('posts/{slug}',['as'=>'post','uses'=>'MobileWebController@getPost']);
 
-Route::get('article', function(){
-    return view('article');
+Route::get('cats/{catname}', function($catname){
+    return view('category');
 });

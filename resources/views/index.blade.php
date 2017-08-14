@@ -12,7 +12,7 @@
 <div class="row" style="padding:0px;margin:0px;width:100%;background-color:#03a9f4;background-size: 100% 100%;">
 <div class="col-lg-12" style="padding:0px;margin:0px;">
 <div style="border:0px solid ;height:138px;background-position:100%;">
-<center><img src="images/ktimezlogo.png"  height="80"  width="280" align="center" style="margin:auto;"></center>
+<center><img src="{{asset('images/ktimezlogo.png')}}"  height="80"  width="280" align="center" style="margin:auto;"></center>
 </div>
 </div>
 <div class="col-lg-12" style="padding:0px;margin:0px;">
@@ -38,45 +38,7 @@
 <div class="row" style="padding:0px 0px;margin:0px;">
 <div class="col-lg-12" style="border:0px solid;margin:0px;padding:0px 0px;border-bottom:2px solid #03a9f4;border-top:2px solid #007ac1;">
 <div id='cssmenu'>
-<ul>
-<li><a href="index.php" style="text-transform:capitalize;">Home</a></li>
-<li>
-<a href="#" style="text-transform:capitalize;">Tech News </a>
-</li>
-
-<li>
-<a href="#" style="text-transform:capitalize;">Smartphones</a>
-<ul>
-<li><a href="#" style="text-transform:capitalize;">Android</a></li>
-<li><a href="#" style="text-transform:capitalize;">IOS</a></li>
-<li><a href="#" style="text-transform:capitalize;">Windows Phone</a></li>
-</ul>
-</li>
-
-<li>
-<a href="#" style="text-transform:capitalize;">Computers</a>
-<ul>
-<li><a href="#" style="text-transform:capitalize;">Windows</a></li>
-<li><a href="#" style="text-transform:capitalize;">Linux</a></li>
-<li><a href="#" style="text-transform:capitalize;">Mac OS</a></li>
-</ul>
-</li>
-
-<li>
-<a href="#" style="text-transform:capitalize;">Tutorials</a>
-<ul>
-<li><a href="#" style="text-transform:capitalize;">Hacking</a></li>
-<li><a href="#" style="text-transform:capitalize;">Web Dev</a></li>
-<li><a href="#" style="text-transform:capitalize;">Dev Ops</a></li>
-<li><a href="#" style="text-transform:capitalize;">Troubleshooting</a></li>
-<li><a href="#" style="text-transform:capitalize;">How To</a></li>								
-</ul>
-</li>
-
-<li>
-<a href="#" style="text-transform:capitalize;">About us</a>
-</li>
-</ul>
+@include('menu')
 </div>
 </div>
 </div>
@@ -94,13 +56,13 @@
 
 <div class="col-lg-12"  style="padding:0px;border:0px solid ;">
 <div style="overflow:hidden;">
-<img src="images/abagera.jpg" width="100%"  style="height:100%" />
+<img src="http://ktimez.com/uploads/featured/{{$sliders[0]->featured}}" width="100%"  style="height:100%" />
 </div>
 </div>
 <div class="col-lg-12"  style="padding:0px;border:0px solid ;">   
 <div class="main_title" style="margin-top:0px;">
 
-<a href="#" style="font-size:11px;">Abagera kuri 25 bagaragaje impano y'ubugeni mbere yo gutoranywamo barindwi bahembwe</a>
+<a href="{{route('post',['slug'=>$sliders[0]->slug])}}" style="font-size:11px;">{{str_limit($sliders[0]->title, 100)}}</a>
 </div>
 </div>
 

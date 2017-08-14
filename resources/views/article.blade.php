@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>Ktimez.com - Mobile Version - @{{article title}}  </title>
+<title>Ktimez.com - Mobile Version - {$post->title}}  </title>
 <link rel="shortcut icon" href="{{asset('images/favicon.png')}}"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href="{{mix('css/all.css')}}" rel="stylesheet">
@@ -55,31 +55,7 @@ ga('send', 'pageview');
 <div class="row" style="padding:0px 0px;margin:0px;">
 <div class="col-lg-12" style="border:0px solid;margin:0px;padding:0px 0px;border-bottom:2px solid #03a9f4;border-top:2px solid #007ac1;">
 <div id='cssmenu'>
-<ul>
-<li><a href="#" style="text-transform:capitalize;">Home</a></li>
-<li><a href="#" style="text-transform:capitalize;">Tech News </a></li>
-<li><a href="#" style="text-transform:capitalize;">Smartphones</a>
-<ul>
-<li><a href="#" style="text-transform:capitalize;">Android</a></li>
-<li><a href="#" style="text-transform:capitalize;">IOS</a></li>
-<li><a href="#" style="text-transform:capitalize;">Windows Phone</a></li>
-</ul></li>
-<li><a href="#" style="text-transform:capitalize;">Computers</a>
-<ul>
-<li><a href="#" style="text-transform:capitalize;">Windows</a></li>
-<li><a href="#" style="text-transform:capitalize;">Linux</a></li>
-<li><a href="#" style="text-transform:capitalize;">Mac OS</a></li>
-</ul></li>
-<li><a href="#" style="text-transform:capitalize;">Tutorials</a>
-<ul>
-<li><a href="#" style="text-transform:capitalize;">Hacking</a></li>
-<li><a href="#" style="text-transform:capitalize;">Web Dev</a></li>
-<li><a href="#" style="text-transform:capitalize;">Dev Ops</a></li>
-<li><a href="#" style="text-transform:capitalize;">Troubleshooting</a></li>
-<li><a href="#" style="text-transform:capitalize;">How To</a></li>								
-</ul></li>
-<li><a href="#" style="text-transform:capitalize;">About us</a></li>
-</ul>
+@include('menu')
 </div>
 </div>
 </div>
@@ -91,11 +67,14 @@ ga('send', 'pageview');
 <div class="row"  style="padding:2px 2px;margin:0px -15px;">
 <div class="col-lg-12"  style="padding:4px 4px;">
 <div class="title_rubrique" >
-<a href="#" style="font-size:20px;color:#2075cf;text-decoration:none;margin-bottom:5px;">Ikigo kiranguza internet mu Rwanda cyahembye abanyeshuri b’abanyempano mu by’ubugeni   </a><br>                  
+<a href="#" style="font-size:20px;color:#2075cf;text-decoration:none;margin-bottom:5px;">{{$post->title}} </a><br>                  
 <table style="width:100%;">
 <tr>
 <td>
-9-08-2017 - Saa 17:17<br/>na <a href="#" class="gh_tab_articledetails_author">Ktimez</a><br>
+@php
+use Carbon\Carbon;
+echo Carbon::parse($post->created_at)->diffForHumans();
+@endphp by <a href="#" class="gh_tab_articledetails_author">{{ $post->posted_by}}</a><br>
 </td> 
 </tr>
 <tr> 
@@ -106,14 +85,14 @@ ga('send', 'pageview');
 </tr>
 </table>    
 </div>
-<center><img class="spip_logo spip_logos" alt="" src="images/abagera.jpg" width='90%' height="411" style='height:auto;margin-top:12px;' /></center>
+<center><img class="spip_logo spip_logos" alt="" src="http://ktimez.com/uploads/featured/{{$post->featured}}" width='90%' height="411" style='height:auto;margin-top:12px;' /></center>
 </div>
 </div>
 <div class="row" style="margin:0px -15px;border:0px;">
 <div class="col-lg-12" style="padding:10px;color:#333333;">
 <div class="internal_article" >
       <p>
-      <h4>content here</h4>
+      {!! $post->body !!}
       </p>
 </div>
 </div>
@@ -133,7 +112,7 @@ ga('send', 'pageview');
 </div>
 <div class="row" style="padding:0px 5px; background-color:#000;border:0px solid ;">
 <div class="col-xs-7" style="padding:0px; border:0px solid ;">
-<div style="padding-top:30px;right:0px;margin-left:20px;"><img src="images/ktimez.jpg" width="135px"></div>
+<div style="padding-top:30px;right:0px;margin-left:20px;"><img src="{{asset('images/ktimez.jpg')}}" width="135px"></div>
 <div style="padding:4px;font-size:14px;font-weight:normal;color:#fff;margin-left:20px;">&copy; 2017  ktimez.com  All rights reserved. </div>
 </div>
 <div class="col-xs-5" style="color:#fff;padding-top:22px;border:0px solid ;text-decoration:none;font-size:12px;">
