@@ -28,7 +28,7 @@ services:
         volumes:
             - redis-data:/data
         networks:
-            - mobile
+            - mobilenet
         restart: unless-stopped
 networks:
     mobilenet:
