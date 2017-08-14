@@ -17,6 +17,8 @@ services:
                 condition: on-failure
     php:
         image: nanoninja/php-fpm
+        networks:
+            - mobilenet
         volumes:
             - "./etc/php/php.ini:/usr/local/etc/php/conf.d/php.ini"
             - ".:/var/www/html"
