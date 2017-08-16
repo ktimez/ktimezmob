@@ -19,9 +19,9 @@ services:
         volumes:
             - "./etc/php/php.ini:/usr/local/etc/php/conf.d/php.ini"
             - ".:/var/www/html"
-        restart: unless-stopped
         links:
-        - ktimezmob
+        - ktimezmob            
+        restart: unless-stopped
     redis:
         image: redis:latest
         ports:
