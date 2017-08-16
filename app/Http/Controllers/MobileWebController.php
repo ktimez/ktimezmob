@@ -39,10 +39,19 @@ class MobileWebController extends Controller
     $client = new Client();
     $res = $client->request('GET', 'http://ktimez.com/api/cats/'.$catname);
     if($res->getStatusCode() == 200){
-        $category = json_decode($res->getBody());
+        $catdatas = json_decode($res->getBody());
     }
-    // handling not found exception
-    return view('category')->with(['category'=>$category]);
+    else
+    {
+        abort(404, "Category you are looking for not found :)");
+    }
+
+    //temporary fix :)
+    if($catdatas == null){
+        exit(0);
+    }
+    // print_r($catdatas);
+    return view('category')->with(['catname'=>$catname,'categories'=>$catdatas]);
    }
 
 }

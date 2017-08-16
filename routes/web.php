@@ -15,6 +15,6 @@ Route::get('/',['as'=>'home','uses'=>'MobileWebController@index']);
 
 Route::get('posts/{slug}',['as'=>'post','uses'=>'MobileWebController@getPost']);
 
-Route::get('cats/{catname}', function($catname){
-    return view('category');
-});
+Route::get('/assets/{img}/{h?}/{w?}',['as'=>'images','uses'=>'AssetsController@index']);
+
+Route::get('cats/{catname}',['as'=>'cats','uses'=>'MobileWebController@getCategory']);

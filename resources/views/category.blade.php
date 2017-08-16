@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>Ktimez.com - Mobile Version - @{{category_name}}</title>
+<title>Ktimez.com - Mobile Version - {{$catname}}</title>
 <link rel="shortcut icon" href="{{asset('images/favicon.png')}}" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href="{{mix('css/all.css')}}" rel="stylesheet">
@@ -47,22 +47,27 @@
 <!--================== CONTENT===============-->
 <div class="container" style="border:0px solid ;padding:0px 15px;margin-top:2px;background-color:#f8f8f8;">
 <div class="row" style="padding:4px 0px;margin-top:3px;margin-left:0px;margin-right:0px;border-top:0px solid #03a9f4;border-bottom:1px solid #1562b6;background-color:#f8f8f8;color:#007ac1;">
-<div class="col-xs-12" style="padding-left:3px;font-size:17px;text-transform:uppercase;">{{$category_name}}</div>
+<div class="col-xs-12" style="padding-left:3px;font-size:17px;text-transform:uppercase;">{{$catname}}</div>
 </div>
 <div class="row"  style="padding:2px 2px;margin:0px -15px;">
 <div class="col-lg-12"  style="padding:4px 0px;">
 <div class="title_rubrique" >
-<a href="#" style="font-size:16px;font-weight:bold;color:#03a9f4;">Ikigo kiranguza internet mu Rwanda cyahembye abanyeshuri b’abanyempano mu by’ubugeni  </a>
+<a href="{{ route('post',['slug'=>$categories[0]->slug])}}" style="font-size:16px;font-weight:bold;color:#03a9f4;">{{str_limit($categories[0]->title, 100)}}</a>
 </div>
-<img src="{{asset('images/abagera.jpg')}}" width="100%"  style="height:100%" /> 
+<img src="{{route('images',['img'=>$categories[0]->featured])}}" width="100%"  style="height:100%" /> 
 </div>
 </div>
 <div class="row" style="margin:0px -20px;">
 <div class="col-lg-12" style="padding:0px;padding-left:2px;padding-left:2px;border-bottom:0px solid #aaa;">
 <table style="width:100%;border:0px solid ;">
+
+@foreach($categories as $post)
+ @if ($loop->first)
+        @continue
+ @endif
 <tr style="padding-bottom:5px;padding-top:5px;border-bottom:1px solid #aaa;">
 <td style="width:125px;height:110px;padding-left:5px;border:0px solid ;">
-<img src="{{asset('images/small.jpg')}}" height=""/>
+<img src="{{ route('images',['img'=>$post->featured,'h'=>120,'w'=>90])}}" height=""/>
 <style>
 .comment_arrow{
 height:30px;
@@ -86,7 +91,7 @@ background-color:#1f78d9;
 </div>
 </td>
 <td class="news_list" style="padding-left:8px;top:0px;border:0px solid ;height:100px; margin:0px; ">							
-<a style="color:#025884;float:left;font-weight:400;font-weight:bold;margin-top:-20px;" href="#">Hakozwe ifaranga rishya rikoreshwa kuri internet, rishobora kuvana Bitcoin ku isoko</a>					        
+<a style="color:#025884;float:left;font-weight:400;font-weight:bold;margin-top:-20px;" href="{{ route('post',['slug'=>$post->slug])}}">{{str_limit($post->title, 100)}}</a>					        
 </td>
 </tr>
 <tr>					
@@ -99,7 +104,8 @@ class='sep'> | </span
 class='sep'></div>
 </center>
 </td>
-</tr>							
+</tr>
+@endforeach							
 </table>
 </div>
 </div>
