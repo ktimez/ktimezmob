@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>Ktimez.com - Mobile Version - {$post->title}}  </title>
+<title>Ktimez.com - Mobile Version - {{$post->title}}  </title>
 <link rel="shortcut icon" href="{{asset('images/favicon.png')}}"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href="{{mix('css/all.css')}}" rel="stylesheet">
