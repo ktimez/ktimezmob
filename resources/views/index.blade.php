@@ -144,7 +144,7 @@ height:30px;
 border-radius: 50%; 
 width:30px;
 border:0px solid;
-margin-top:15px;
+margin-top:-25px;
 margin-right:0px;
 position:relative;
 z-index:9999;
