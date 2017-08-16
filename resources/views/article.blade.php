@@ -102,8 +102,8 @@ echo Carbon::parse($post->created_at)->diffForHumans();
 <div class="col-lg-12">
 <center>
 <div class="search_footer" style="margin:auto;">
-<form method="GET" action="spip.php" >
-<input type="text" placeholder="Shakisha..." id="searching" name="recherche">
+<form method="GET" action="#" >
+<input type="text" placeholder="Shakisha..." id="searching" name="search">
 <input type="hidden" name="page" value="search"/>
 </form>
 </div>
