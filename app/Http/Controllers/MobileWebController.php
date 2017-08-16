@@ -9,11 +9,13 @@ use GuzzleHttp\Client;
 class MobileWebController extends Controller
 {
     public function index(){
-        $sliders = $this->getHomePagedata();
-       return view('index')->with(['sliders'=>$sliders]);
+        $sliders = $this->getHomeSlider();
+        $popular = $this->getPopular();
+       return view('index')->with(['sliders'=>$sliders,'popular'=>$popular]);
     }
 
-   function getHomePagedata(){
+    //get lastest+most view post
+   function getHomeSlider(){
     $client = new Client();
     $res = $client->request('GET', 'http://ktimez.com/api/posts/slider');
     if($res->getStatusCode() == 200){
@@ -23,6 +25,19 @@ class MobileWebController extends Controller
         $sliders = NULL;
     }
     return $sliders;
+   }
+
+   //get popular posts
+   function getPopular(){
+    $client = new Client();
+    $res = $client->request('GET', 'http://ktimez.com/api/posts/popular');
+    if($res->getStatusCode() == 200){
+        $popular = json_decode($res->getBody());
+    }else
+    {
+        $popular = NULL;
+    }
+    return $popular;
    }
 
    public function getPost($slug){

@@ -116,15 +116,16 @@ background-color:#1f78d9;
 </div>
 
 <!--  ============================ more  ================================================ -->
-
+<hr>
 <div class="row" style="margin:0px -15px;" id="pagination_articles_recents">
-<div class="col-lg-12" style="background:#03a9f4;padding:5px; color:#fff; font-size:16px; font-weight:bold;padding-left:13px;">MORE</div>
+<div class="col-lg-12" style="background:#03a9f4;padding:5px; color:#fff; font-size:16px; font-weight:bold;padding-left:13px;">popular</div>
 
 <div class="col-lg-12" style="padding:0px;padding-left:2px;padding-left:2px;border-bottom:0px solid #aaa;">
-<table style="width:100%;border:0px solid red;">      
+<table style="width:100%;border:0px solid red;">  
+@foreach($popular as $pop)    
 <tr style="padding-bottom:5px;padding-top:5px;border-bottom:1px solid #aaa;">
 <td style="width:125px;height:110px;padding-left:5px;border:0px solid red;">
-<img src="images/whatsapp.jpg" height="" style="" />
+<img src="{{route('images',['img'=>$pop->featured,'h'=>120,'w'=>90]) }}" height="" style="" />
 <style>
 .comment_arrow{
 height:30px;
@@ -152,9 +153,10 @@ background-color:#1f78d9;
 
 </td>
 <td class="news_list" style="padding-left:8px;top:0px;border:0px solid red;height:100px; margin:0px; ">							
-<a style="color:#03a9f4;float:left;font-weight:400;font-weight:bold;margin-top:-20px;" href="amakuru/u-rwanda/article/bugesera-imiryango-58-y-abarokotse-jenoside-yiyunze-n-abagororwa-bayiciye">Bugesera: Imiryango 58 y’abarokotse Jenoside yiyunze n’abagororwa bayiciye</a>					        
+<a style="color:#03a9f4;float:left;font-weight:400;font-weight:bold;margin-top:-20px;" href="{{ route('post',['slug'=>$pop->slug])}}">{{ str_limit($pop->title,100)}}</a>					        
 </td>
 </tr>
+@endforeach
 <tr>					
 <td colspan="2">
 <center><div class="pagination" style="margin-top:-10px;"><a name='pagination_articles_recents' id='pagination_articles_recents'></a>
@@ -166,7 +168,6 @@ class='sep'> | </span
 </table>
 </div>	
 </div>
-
 <div class="row" style="padding:7px;margin-top:0px;border:0px solid red;">
 <div class="col-lg-12" style="margin-top:15px;">
 
