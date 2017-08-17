@@ -19,7 +19,7 @@ Route::get('/assets/{img}/{h?}/{w?}',['as'=>'images','uses'=>'AssetsController@i
 Route::get('posts/{slug}',['as'=>'post','uses'=>'MobileWebController@getPost']);
 Route::get('post/{slug}',['as'=>'post','uses'=>'MobileWebController@getPost']);
 
-#add smort transition
+#smooth transition
 Route::get('cats/{catname}',['as'=>'cats','uses'=>'MobileWebController@getCategory']);
 Route::get('category/{catname}',['as'=>'cats','uses'=>'MobileWebController@getCategory']);
 
