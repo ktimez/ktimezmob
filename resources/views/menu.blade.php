@@ -33,7 +33,4 @@
 </ul>
 </li>
 
-<li>
-<a href="#" style="text-transform:capitalize;">About us</a>
-</li>
 </ul>

@@ -22,5 +22,3 @@ Route::get('post/{slug}',['as'=>'post','uses'=>'MobileWebController@getPost']);
 #smooth transition
 Route::get('cats/{catname}',['as'=>'cats','uses'=>'MobileWebController@getCategory']);
 Route::get('category/{catname}',['as'=>'cats','uses'=>'MobileWebController@getCategory']);
-
-Route::get('about',['as'=>'about','uses'=>'MobileWebController@about']);
