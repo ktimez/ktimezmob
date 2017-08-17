@@ -13,6 +13,9 @@
 
 Route::get('/',['as'=>'home','uses'=>'MobileWebController@index']);
 
+Route::get('post/{slug}',['as'=>'post','uses'=>'MobileWebController@getPost']);
+
+// smooth transition
 Route::get('posts/{slug}',['as'=>'post','uses'=>'MobileWebController@getPost']);
 
 Route::get('/assets/{img}/{h?}/{w?}',['as'=>'images','uses'=>'AssetsController@index']);
