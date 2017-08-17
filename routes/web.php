@@ -13,11 +13,14 @@
 
 Route::get('/',['as'=>'home','uses'=>'MobileWebController@index']);
 
-Route::get('post/{slug}',['as'=>'post','uses'=>'MobileWebController@getPost']);
+Route::get('/assets/{img}/{h?}/{w?}',['as'=>'images','uses'=>'AssetsController@index']);
 
 // smooth transition
 Route::get('posts/{slug}',['as'=>'post','uses'=>'MobileWebController@getPost']);
+Route::get('post/{slug}',['as'=>'post','uses'=>'MobileWebController@getPost']);
 
-Route::get('/assets/{img}/{h?}/{w?}',['as'=>'images','uses'=>'AssetsController@index']);
-
+#add smort transition
 Route::get('cats/{catname}',['as'=>'cats','uses'=>'MobileWebController@getCategory']);
+Route::get('category/{catname}',['as'=>'cats','uses'=>'MobileWebController@getCategory']);
+
+Route::get('about',['as'=>'about','uses'=>'MobileWebController@about']);
