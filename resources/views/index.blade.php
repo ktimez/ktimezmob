@@ -92,28 +92,6 @@ ga('send', 'pageview');
 <tr class="main_articles">
 <td style="width:105px;height:105px;padding-left:4px;border:0px solid ;">
 <img src="{{ route('images',['img'=>$slider->featured,'h'=>120,'w'=>90])}}" />
-<style>
-.comment_arrow1{
-height:30px;
-width:30px;
-border-radius:50%;
-margin-top:-25px;
-margin-right:0px;
-position:relative;
-z-index:9999;
-float:right;
-color:#fff;
-background-color:#1f78d9;
-}
-
-</style>
-<div class="comment_arrow1" style="padding-top:2px;">
-<center>
-1
-</center>
-<img src="images/arrow22.png" style="margin-left:5px;margin-top:-12px;">
-</div>
-
 </td>
 <td class="news_list" style="padding-left:8px;top:0px;border:0px solid ;height:auto; margin:0px; ">
 <a style="color:#fff;float:left;font-weight:400;margin-top:-20px;" href="{{ route('post',['slug'=>$slider->slug])}}" style="font-size:11px;">{{str_limit($slider->title, 100)}}</a>
@@ -138,31 +116,6 @@ background-color:#1f78d9;
 <tr style="padding-bottom:5px;padding-top:5px;border-bottom:1px solid #aaa;">
 <td style="width:125px;height:110px;padding-left:5px;border:0px solid red;">
 <img src="{{route('images',['img'=>$pop->featured,'h'=>120,'w'=>90]) }}" height="" style="" />
-<style>
-.comment_arrow{
-height:30px;
-border-radius: 50%; 
-width:30px;
-border:0px solid;
-margin-top:-25px;
-margin-right:0px;
-position:relative;
-z-index:9999;
-float:right;
-color:#fff;
-background-color:#1f78d9;
-}
-
-</style>
-<div class="comment_arrow" style="padding-top:3px;">
-<center>
-
-10
-
-</center>
-<img src="images/arrow22.png" style="margin-left:5px;margin-top:-12px;">
-</div>
-
 </td>
 <td class="news_list" style="padding-left:8px;top:0px;border:0px solid red;height:100px; margin:0px; ">							
 <a style="color:#03a9f4;float:left;font-weight:400;font-weight:bold;margin-top:-20px;" href="{{ route('post',['slug'=>$pop->slug])}}">{{ str_limit($pop->title,100)}}</a>					        
