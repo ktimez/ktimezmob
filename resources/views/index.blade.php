@@ -19,9 +19,9 @@ ga('send', 'pageview');
 <!-- end of ga -->
 
 </head>
-<body>  
+<body style="background-color:#e2e1e0;">  
 <div class="container" style="border:0px solid ;height:120px;margin-top:0px;padding:0px 0px;">
-<div class="row" style="padding:0px;margin:0px;width:100%;background-color:#03a9f4;background-size: 100% 100%;">
+<div class="row card card-2" style="padding:0px;margin:0px;width:100%;background-color:#ffffff;background-size: 100% 100%;">
 <div class="col-lg-12" style="padding:0px;margin:0px;">
 <div style="border:0px solid ;height:138px;background-position:100%;">
 <center><img src="{{asset('images/ktimezlogo.png')}}"  height="80"  width="280" align="center" style="margin:auto;"></center>
@@ -48,7 +48,7 @@ ga('send', 'pageview');
 </div>      
 <div class="container" style="padding:0px 0px;margin-top:20px;border:0px solid;">
 <div class="row" style="padding:0px 0px;margin:0px;">
-<div class="col-lg-12" style="border:0px solid;margin:0px;padding:0px 0px;border-bottom:2px solid #03a9f4;border-top:2px solid #007ac1;">
+<div class="col-lg-12" style="border:0px solid;margin:0px;padding:0px 0px;border-bottom:2px solid #03a9f4;border-top:2px solid #03a9f4;">
 <div id='cssmenu'>
 @include('menu')
 </div>
@@ -64,7 +64,7 @@ ga('send', 'pageview');
 
 </div>
 </div>
-<div class="row"  style="padding:2px 2px;margin:0px -15px;">
+<div class="row card card-2"  style="padding:2px 2px;margin:0px -15px;">
 
 <div class="col-lg-12"  style="padding:0px;border:0px solid ;">
 <div style="overflow:hidden;">
@@ -72,14 +72,12 @@ ga('send', 'pageview');
 </div>
 </div>
 <div class="col-lg-12"  style="padding:0px;border:0px solid ;">   
-<div class="main_title" style="margin-top:0px;">
-
-<a href="{{route('post',['slug'=>$sliders[0]->slug])}}" style="font-size:11px;">{{str_limit($sliders[0]->title, 100)}}</a>
+<div class="main_title" style="margin-top:5px;">
+<a href="{{route('post',['slug'=>$sliders[0]->slug])}}" style="font-size:16px;font-weight:bold;">{{str_limit($sliders[0]->title, 100)}}</a>
 </div>
 </div>
-
 </div>
-<div class="row" style="padding:0px;border:0px solid ;margin-top:1px;margin-bottom:0px;background-color:#03a9f4;color:#fff;">
+<div class="row" style="padding:0px;border:0px solid ;margin-top:1px;margin-bottom:0px;color:#fff;">
 <div class="col-lg-12" style="margin:0px;padding:0px;border:0px solid ;">
 
 <table style="width:100%;border:0px solid ;">
@@ -106,7 +104,6 @@ ga('send', 'pageview');
 </div>
 
 <!--  ============================ more  ================================================ -->
-<hr>
 <div class="row" style="margin:0px -15px;" id="pagination_articles_recents">
 <div class="col-lg-12" style="background:#03a9f4;padding:5px; color:#fff; font-size:16px; font-weight:bold;padding-left:13px;">popular</div>
 
@@ -124,10 +121,16 @@ ga('send', 'pageview');
 @endforeach
 <tr>					
 <td colspan="2">
-<center><div class="pagination" style="margin-top:-10px;"><a name='pagination_articles_recents' id='pagination_articles_recents'></a>
-<span class="pages"><strong class='on'>1</strong><span
-class='sep'> | </span
-><a href='#' class='lien_pagination' rel='nofollow'>2</a></span></div></center>						
+<center>
+<div class="pagination" style="margin-top:-10px;">
+<span><a href="#"><<</a></span>
+&nbsp;
+<span class="pages"><strong class='on'><a href="#">1</a></strong>
+<span class='sep'> </span>
+<span class="pages"><a href='#'>2</a></span></div>
+&nbsp;
+<span><a href="#">>></a></span>
+</center>						
 </td>
 </tr>							
 </table>
@@ -136,25 +139,8 @@ class='sep'> | </span
 <div class="row" style="padding:7px;margin-top:0px;border:0px solid red;">
 <div class="col-lg-12" style="margin-top:15px;">
 
-<img src="images/adshere.png" width="100%" height="250px" style="border-radius:0px;">
+<img src="images/ad-header.png" width="100%" height="50px" style="border-radius:0px;">
 
-</div>
-</div>
-<div class="row" style="padding:2px 0px;border:0px solid red;">
-<div class="col-lg-12" style="padding-top:4px;padding-bottom:4px;color:#2b7bda; font-size:16px; font-weight:bold;padding-left:13px;">
-SEARCH HERE
-</div>
-</div>
-<div class="row" style="padding:7px;">
-<div class="col-lg-12">
-<center>
-<div class="search_footer" style="margin:auto;">
-<form method="GET" action="#" style="">
-<input type="text" placeholder="Shakisha..." id="searching" name="search">
-<input type="hidden" name="page" value="mv2_recherche"/>
-</form>
-</div>
-</center>
 </div>
 </div>
 <!--  #################### ktimez app ###########################-->
@@ -167,7 +153,7 @@ SEARCH HERE
 <!--  ############################################### subfooter ###############################################-->
 <div class="row" style="padding:0px 0px;">
 <div class="col-lg-12" style="padding:0px;">
-<!-- <a href="https://play.google.com/store/apps/details?id=com.ktimez.app&hl=en" target="_blank">-->
+{{--  apps link here  --}}
 </a>
 </div>
 </div>
@@ -175,7 +161,7 @@ SEARCH HERE
 <div class="row" style="padding:0px 5px; background-color:#000;border:0px solid ;">
 <div class="col-xs-7" style="padding:0px; border:0px solid;">
 <div style="padding-top:30px;right:0px;margin-left:20px;"><img src="images/ktimez.jpg" width="135px"></div>
-<div style="padding:4px;font-size:14px;font-weight:normal;color:#fff;margin-left:20px;">&copy; 2017 Ktimez All rights reserved. </div>
+<div style="padding:4px;font-size:14px;font-weight:normal;color:#fff;margin-left:20px;">&copy; {{ date('Y') }} Ktimez All rights reserved. </div>
 </div>
 <div class="col-xs-5" style="color:#fff;padding-top:22px;border:0px solid ;text-decoration:none;font-size:12px;">
 <div class="footer_down">

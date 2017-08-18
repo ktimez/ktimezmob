@@ -24,10 +24,10 @@ ga('send', 'pageview');
 .internal_article .puce{width:8px;height:11px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;}
 </style>
 </head>
-<body  >
+<body style="background-color:#e2e1e0;">
 <!--===================== HEADER ===========-->
 <div class="container" style="border:0px;height:120px;margin-top:0px;padding:0px 0px;">
-<div class="row" style="padding:0px;margin:0px;width:100%;background-color:#03a9f4;background-size: 100% 100%;">
+<div class="row" style="padding:0px;margin:0px;width:100%;background-color:#ffffff;background-size: 100% 100%;">
 <div class="col-lg-12" style="padding:0px;margin:0px;">
 <div style="border:0px;height:138px;background-position:100%;">
 <center><a href="#"><img src="{{asset('images/ktimezlogo.png')}}"  height="80"  width="280" align="center" style="margin:auto;border:none;"></a></center>
@@ -53,7 +53,7 @@ ga('send', 'pageview');
 </div>
 <div class="container" style="padding:0px 0px;margin-top:20px;border:0px solid;">
 <div class="row" style="padding:0px 0px;margin:0px;">
-<div class="col-lg-12" style="border:0px solid;margin:0px;padding:0px 0px;border-bottom:2px solid #03a9f4;border-top:2px solid #007ac1;">
+<div class="col-lg-12" style="border:0px solid;margin:0px;padding:0px 0px;border-bottom:2px solid #03a9f4;border-top:2px solid #03a9f4;">
 <div id='cssmenu'>
 @include('menu')
 </div>
@@ -100,14 +100,6 @@ echo Carbon::parse($post->created_at)->diffForHumans();
 <hr>
 <div class="row" style="padding:7px;">
 <div class="col-lg-12">
-<center>
-<div class="search_footer" style="margin:auto;">
-<form method="GET" action="#" >
-<input type="text" placeholder="Shakisha..." id="searching" name="search">
-<input type="hidden" name="page" value="search"/>
-</form>
-</div>
-</center>
 </div>
 </div>
 <div class="row" style="padding:0px 5px; background-color:#000;border:0px solid ;">
