@@ -16,7 +16,7 @@ class AssetsController extends Controller
         }, 1, false);
             return response()->make($cachedImage, 200, ['Content-Type' => 'image/jpeg']);
         }
-        $cachedImage = Image::cache(function($image) use ($url,$img) { return $image->make($url.$img);}, 1, false);
+        $cachedImage = Image::cache(function($image) use ($url,$img) { return $image->make($url.$img)->resize(301,201);}, 1, false);
         return response()->make($cachedImage, 200, ['Content-Type' => 'image/jpeg']);
     }
 }

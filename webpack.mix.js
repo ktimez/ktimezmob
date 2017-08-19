@@ -12,5 +12,5 @@ let mix = require('laravel-mix');
  */
 
 mix.js(['resources/assets/js/jquery.js','resources/assets/js/bootstrap.min.js','resources/assets/js/menu.js'],'public/js/all.js')
-   .styles(['resources/assets/css/bootstrap.min.css','resources/assets/css/menu.css','esources/assets/css/mobile.css'], 'public/css/all.css')
+   .styles(['resources/assets/css/bootstrap.min.css','resources/assets/css/menu.css','resources/assets/css/mobile.css'], 'public/css/all.css')
    .version();

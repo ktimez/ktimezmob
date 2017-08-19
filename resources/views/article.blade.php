@@ -90,10 +90,8 @@ echo Carbon::parse($post->created_at)->diffForHumans();
 </div>
 <div class="row" style="margin:0px -15px;border:0px;">
 <div class="col-lg-12" style="padding:10px;color:#333333;">
-<div class="internal_article" >
-      <p>
+<div class="internal_article">
       {!! $post->body !!}
-      </p>
 </div>
 </div>
 </div>
