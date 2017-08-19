@@ -46,7 +46,7 @@ box-shadow: #03a9f4;
 background: #eeeeee no-repeat left 5px center;
 color:#000;
  }
-.main_title{border:0px solid ;padding:4px;padding-bottom:5px;height:60px;;background-color:#333; margin-top:-60px; opacity:0.9;}
+.main_title{border:0px solid ;padding:4px;padding-bottom:5px;height:60px;background-color:#03a9f4; margin-top:-60px; opacity:0.9;}
 .main_title a{color:#fff;font-weight:400;font-size:18px;padding-bottom:3px;}
 .news_list{border:0px solid ;height:98px;margin:7px 0px;}
 .news_list img{height:100%;width:100%;}
