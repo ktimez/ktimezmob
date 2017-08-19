@@ -17,7 +17,7 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  color:#ffffff;
+  color:#fff;
 }
 #cssmenu:after,
 #cssmenu > ul:after {
@@ -34,7 +34,7 @@
 #cssmenu {
   font-family: PT Sans, sans-serif;
   background: #03a9f4;
-  color:#ffffff;
+  color:#fff;
 }
 #cssmenu > ul > li {
   float: left;
@@ -264,7 +264,7 @@ background-color: #03a9f4;
   #cssmenu #menu-button {
     display: block;
     padding: 17px;
-    color: #007ac1;
+    color: #fff;
     cursor: pointer;
     font-size: 14px;
     text-transform: uppercase;
@@ -278,8 +278,8 @@ background-color: #03a9f4;
     display: block;
     height: 8px;
     width: 20px;
-    border-top: 3px solid #007ac1;
-	  border-bottom: 3px solid #007ac1;
+    border-top: 3px solid #fff;
+	  border-bottom: 3px solid #fff;
     content: '';
 	
 	
@@ -291,7 +291,7 @@ background-color: #03a9f4;
     display: block;
     height: 3px;
     width: 20px;
-    background: #007ac1;
+    background: #fff;
     content: '';
   }
   #cssmenu #menu-button.menu-opened:after {
