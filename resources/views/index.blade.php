@@ -68,12 +68,12 @@ ga('send', 'pageview');
 
 <div class="col-lg-12"  style="padding:0px;border:0px solid ;">
 <div style="overflow:hidden;">
-<img src="{{route('images',['img'=>$sliders[0]->featured])}}" width="100%"  style="height:100%" />
+<img src="{{route('images',['img'=>$latests[0]->featured])}}" width="100%"  style="height:100%" />
 </div>
 </div>
 <div class="col-lg-12"  style="padding:0px;border:0px solid ;">   
 <div class="main_title" style="margin-top:5px;">
-<a href="{{route('post',['slug'=>$sliders[0]->slug])}}" style="font-size:16px;font-weight:bold;">{{str_limit($sliders[0]->title, 100)}}</a>
+<a href="{{route('post',['slug'=>$latests[0]->slug])}}" style="font-size:16px;font-weight:bold;">{{str_limit($latests[0]->title, 100)}}</a>
 </div>
 </div>
 </div>
@@ -82,24 +82,21 @@ ga('send', 'pageview');
 
 <table style="width:100%;border:0px solid ;">
 
-@foreach($sliders as $slider)
+@foreach($latests as $latest)
  @if ($loop->first)
         @continue
  @endif
-
 <tr class="main_articles">
 <td style="width:105px;height:105px;padding-left:4px;border:0px solid ;">
-<img src="{{ route('images',['img'=>$slider->featured,'h'=>120,'w'=>90])}}" />
+<img src="{{ route('images',['img'=>$latest->featured,'h'=>120,'w'=>90])}}" />
 </td>
 <td class="news_list" style="padding-left:8px;top:0px;border:0px solid ;height:auto; margin:0px; ">
-<a style="color:#fff;float:left;font-weight:400;margin-top:-20px;" href="{{ route('post',['slug'=>$slider->slug])}}" style="font-size:11px;">{{str_limit($slider->title, 100)}}</a>
+<a style="color:#fff;float:left;font-weight:400;margin-top:-20px;" href="{{ route('post',['slug'=>$latest->slug])}}" style="font-size:11px;">{{str_limit($latest->title, 100)}}</a>
 
 </td>
 </tr>
 @endforeach
-
 </table>
-
 </div>
 </div>
 
