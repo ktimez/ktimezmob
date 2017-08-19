@@ -101,13 +101,9 @@ echo Carbon::parse($post->created_at)->diffForHumans();
 </div>
 </div>
 <div class="row" style="padding:0px 5px; background-color:#000;border:0px solid ;">
-<div class="col-xs-7" style="padding:0px; border:0px solid ;">
+<div class="col-xs-12" style="padding:0px; border:0px solid ;">
 <div style="padding-top:30px;right:0px;margin-left:20px;"><img src="{{asset('images/ktimez.jpg')}}" width="135px"></div>
 <div style="padding:4px;font-size:14px;font-weight:normal;color:#fff;margin-left:20px;">&copy; 2017  ktimez.com  All rights reserved. </div>
-</div>
-<div class="col-xs-5" style="color:#fff;padding-top:22px;border:0px solid ;text-decoration:none;font-size:12px;">
-<div class="footer_down">
-</div>
 </div>
 </div>
 </div>
