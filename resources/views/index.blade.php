@@ -64,7 +64,7 @@ ga('send', 'pageview');
 
 </div>
 </div>
-<div class="row card card-2"  style="padding:2px 2px;margin:0px -15px;">
+<div class="row card card-2"  style="padding:2px 2px;margin:0px -15px;width:inherit;">
 
 <div class="col-lg-12"  style="padding:0px;border:0px solid ;">
 <div style="overflow:hidden;">
