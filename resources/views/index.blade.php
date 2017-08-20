@@ -21,7 +21,7 @@ ga('send', 'pageview');
 </head>
 <body style="background-color:#e2e1e0;">  
 <div class="container" style="border:0px solid ;height:120px;margin-top:0px;padding:0px 0px;">
-<div class="row card card-2" style="padding:0px;margin:0px;width:100%;background-color:#ffffff;background-size: 100% 100%;">
+<div class="row" style="padding:0px;margin:0px;width:100%;background-color:#ffffff;background-size: 100% 100%;">
 <div class="col-lg-12" style="padding:0px;margin:0px;">
 <div style="border:0px solid ;height:138px;background-position:100%;">
 <center><a href="{{route('home')}}"><img src="{{asset('images/ktimezlogo.png')}}"  height="80"  width="280" align="center" style="margin:auto;"></a></center>
@@ -64,7 +64,7 @@ ga('send', 'pageview');
 
 </div>
 </div>
-<div class="row card card-2"  style="padding:2px 2px;margin:0px -15px;width:inherit;">
+<div class="row"  style="padding:2px 2px;margin:0px -15px;width:inherit;">
 
 <div class="col-lg-12"  style="padding:0px;border:0px solid ;">
 <div style="overflow:hidden;">
