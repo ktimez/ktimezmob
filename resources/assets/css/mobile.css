@@ -87,7 +87,13 @@ font-weight:bold;
 }
 .internal_article{padding-left:2px;padding-right:2px;}
 .internal_article p{color:#333333;text-align:justify;}
-.internal_article img{ width:inherit !important;height:auto;padding-left:20px;padding-right:20px;padding-top:30px;padding-bottom:30px;}
+.internal_article img{
+  width: inherit!important;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
 
 
 .comment_form{

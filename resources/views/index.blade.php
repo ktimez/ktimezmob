@@ -24,7 +24,7 @@ ga('send', 'pageview');
 <div class="row" style="padding:0px;margin:0px;width:100%;background-color:#ffffff;background-size: 100% 100%;">
 <div class="col-lg-12" style="padding:0px;margin:0px;">
 <div style="border:0px solid ;height:138px;background-position:100%;">
-<center><a href="{{route('home')}}"><img src="{{asset('images/ktimezlogo.png')}}"  height="80"  width="280" align="center" style="margin:auto;"></a></center>
+<center><a href="{{route('home')}}"><img src="{{asset('images/ktimezlogo.png')}}" class="img img-responsive" height="80"  width="280" align="center" style="margin:auto;"></a></center>
 </div>
 </div>
 <div class="col-lg-12" style="padding:0px;margin:0px;">
