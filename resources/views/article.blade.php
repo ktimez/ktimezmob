@@ -71,10 +71,12 @@ ga('send', 'pageview');
 <table style="width:100%;">
 <tr>
 <td>
+<a href="#">
+<span class="glyphicon glyphicon-time"></span>
 @php
 use Carbon\Carbon;
 echo Carbon::parse($post->created_at)->diffForHumans();
-@endphp by <a href="#" class="gh_tab_articledetails_author">{{ $post->posted_by}}</a><br>
+@endphp</a> by <a href="#" class="gh_tab_articledetails_author">{{ $post->posted_by}}</a>   <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<a href="#">{{$post->views}}</a><br>
 </td> 
 </tr>
 <tr> 
