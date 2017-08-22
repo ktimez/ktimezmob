@@ -78,6 +78,7 @@ ga('send', 'pageview');
 </div>
 </div>
 <div class="row" style="padding:0px;border:0px solid ;margin-top:1px;margin-bottom:0px;color:#fff;">
+<div class="col-lg-12" style="background:#03a9f4;padding:5px; color:#fff; font-size:16px; font-weight:bold;padding-left:13px;">latest</div>
 <div class="col-lg-12" style="margin:0px;padding:0px;border:0px solid ;">
 
 <table style="width:100%;border:0px solid ;">
@@ -91,7 +92,7 @@ ga('send', 'pageview');
 <img src="{{ route('images',['img'=>$latest->featured,'h'=>120,'w'=>90])}}" />
 </td>
 <td class="news_list" style="padding-left:8px;top:0px;border:0px solid ;height:auto; margin:0px; ">
-<a style="color:#fff;float:left;font-weight:400;margin-top:-20px;" href="{{ route('post',['slug'=>$latest->slug])}}" style="font-size:11px;">{{str_limit($latest->title, 100)}}</a>
+<a style="color:#03A9F3;float:left;font-weight:bold;margin-top:-20px;" href="{{ route('post',['slug'=>$latest->slug])}}" style="font-size:11px;">{{str_limit($latest->title, 100)}}</a>
 
 </td>
 </tr>
