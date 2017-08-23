@@ -9,7 +9,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:title" content="{{$post->title}}" />
 {{--  <meta property="og:description" content="{{str_limit($post->title, 100)}}..." />  --}}
-<meta property="og:url" content="http://ktimez.com/post/{{$post->slug}}" />
+<meta property="og:url" content="http://m.ktimez.com/post/{{$post->slug}}" />
 <meta property="og:site_name" content="Ktimez" />
 {{--  <meta property="og:section" content="{{ }}" />  --}}
 <meta property="og:image" content="{{route('images',['img'=>$post->featured]) }}" />
