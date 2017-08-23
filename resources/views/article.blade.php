@@ -5,6 +5,15 @@
 <title>Ktimez.com - Mobile Version | {{$post->title}}  </title>
 <link rel="shortcut icon" href="{{asset('images/favicon.png')}}"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{{$post->title}}" />
+{{--  <meta property="og:description" content="{{str_limit($post->title, 100)}}..." />  --}}
+<meta property="og:url" content="http://ktimez.com/post/{{$post->slug}}" />
+<meta property="og:site_name" content="Ktimez" />
+{{--  <meta property="og:section" content="{{ }}" />  --}}
+<meta property="og:image" content="{{route('images',['img'=>$post->featured]) }}" />
+
 <link href="{{mix('css/all.css')}}" rel="stylesheet">
 <!--[if lt IE 9]>
 <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
