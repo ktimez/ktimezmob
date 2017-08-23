@@ -87,7 +87,7 @@ echo Carbon::parse($post->created_at)->diffForHumans();
 </tr>
 </table>    
 </div>
-<center><img class="spip_logo spip_logos" alt="" src="{{route('images',['img'=>$post->featured]) }}" width='95%'height="411" style='height:auto;margin-top:12px;' /></center>
+<center><img class="spip_logo spip_logos" alt="" src="{{route('images',['img'=>$post->featured]) }}" width="95%"  style='height:auto;margin-top:12px;' /></center>
 </div>
 </div>
 <div class="row" style="margin:0px -15px;border:0px;">
