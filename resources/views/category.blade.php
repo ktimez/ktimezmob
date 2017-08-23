@@ -79,32 +79,12 @@ ga('send', 'pageview');
 <tr style="padding-bottom:5px;padding-top:5px;border-bottom:1px solid #aaa;">
 <td style="width:125px;height:110px;padding-left:5px;border:0px solid ;">
 <img src="{{ route('images',['img'=>$post->featured,'h'=>120,'w'=>90])}}" height=""/>
-<style>
-.comment_arrow{
-height:30px;
-border-radius: 50%; 
-width:30px;
-border:0px solid ;
-margin-top:-25px;
-margin-right:0px;
-position:relative;
-z-index:9999;
-float:right;
-color:#fff;
-background-color:#1f78d9;
-}
-</style>
-<div class="comment_arrow" style="padding-top:2px;">
-<center>
-1
-</center>
-<img src="{{asset('images/arrow22.png')}}" style="margin-left:5px;margin-top:-12px;">
-</div>
 </td>
 <td class="news_list" style="padding-left:8px;top:0px;border:0px solid ;height:100px; margin:0px; ">							
 <a style="color:#025884;float:left;font-weight:400;font-weight:bold;margin-top:-20px;" href="{{ route('post',['slug'=>$post->slug])}}">{{str_limit($post->title, 100)}}</a>					        
 </td>
 </tr>
+@endforeach	
 <tr>					
 <td colspan="2">
 <center><div class="pagination" style="margin-top:-10px;"><a name='pagination_articles_recents' id='pagination_articles_recents'></a>
@@ -115,14 +95,13 @@ class='sep'> | </span
 class='sep'></div>
 </center>
 </td>
-</tr>
-@endforeach							
+</tr>						
 </table>
 </div>
 </div>
 <div class="row" style="padding:2px 0px;border:0px solid ;">
 <div class="col-lg-12" style="padding:0px;">		
-<img src="{{asset('images/adshere.png')}}" width="100%" height="250px"  style="border-radius:0px;">
+<img src="{{asset('images/ad-header.png')}}" width="100%" height="50px" style="border-radius:0px;">
 </div>
 </div>
 <div class="row" style="padding:7px;">
@@ -131,8 +110,8 @@ class='sep'></div>
 </div>
 <div class="row" style="padding:0px 5px; background-color:#000;border:0px solid ;">
 <div class="col-xs-12" style="padding:0px; border:0px solid ;">
-<div style="padding-top:30px;right:0px;margin-left:20px;"><img src="{{asset('images/ktimez.jpg')}}" width="135px"></div>
-<div style="padding:4px;font-size:14px;font-weight:normal;color:#807e7f;margin-left:20px;">&copy; 2017 Ktimez.com All rights reserved </div>
+<div style="padding-top:30px;right:0px;margin-left:20px;"><img src="{{asset('images/ktimez.jpg')}}" class="img img-responsive" width="135px"></div>
+<div style="padding:4px;font-size:14px;font-weight:normal;color:#807e7f;margin-left:20px;">&copy; {{date('Y')}} Ktimez.com All rights reserved </div>
 </div>
 </div>
 </div>

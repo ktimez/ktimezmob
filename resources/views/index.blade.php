@@ -158,8 +158,12 @@ ga('send', 'pageview');
 <!--  ################### end of subfooter ###################-->
 <div class="row" style="padding:0px 5px; background-color:#000;border:0px solid ;">
 <div class="col-xs-12" style="padding:0px; border:0px solid;">
-<div style="padding-top:30px;right:0px;margin-left:20px;"><img src="images/ktimez.jpg" class="img img-responsive" width="135px"></div>
+<div class="col-xs-4">
+<div style="padding-top:30px;right:0px;margin-left:20px;"><img src="{{asset('images/ktimez.jpg')}}" class="img img-responsive" height="50"></div>
+</div><div class="col-xs-8"></div>
+<div class="col-xs-12">
 <div style="padding:4px;font-size:12px;font-weight:normal;color:#fff;">&copy; {{ date('Y') }} Ktimez All rights reserved. </div>
+</div>
 </div>
 </div>
 </div>
