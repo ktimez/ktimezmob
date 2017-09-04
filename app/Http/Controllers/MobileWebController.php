@@ -17,7 +17,7 @@ class MobileWebController extends Controller
     //get lastest+most view post
    function getHomeLatest(){
     $client = new Client();
-    $res = $client->request('GET', 'http://ktimez.com/api/posts/mobile/latest/5');
+    $res = $client->request('GET', 'http://ktimez.com/api/posts/mobile/latest/25');
     if($res->getStatusCode() == 200){
         $latest = json_decode($res->getBody());
     }else

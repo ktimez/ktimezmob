@@ -97,26 +97,6 @@ ga('send', 'pageview');
 </td>
 </tr>
 @endforeach
-</table>
-</div>
-</div>
-
-<!--  ============================ more  ================================================ -->
-<div class="row" style="margin:0px -15px;" id="pagination_articles_recents">
-<div class="col-lg-12" style="background:#03a9f4;padding:5px; color:#fff; font-size:16px; font-weight:bold;padding-left:13px;">popular</div>
-
-<div class="col-lg-12" style="padding:0px;padding-left:2px;padding-left:2px;border-bottom:0px solid #aaa;">
-<table style="width:100%;border:0px solid red;">  
-@foreach($popular as $pop)    
-<tr style="padding-bottom:5px;padding-top:5px;border-bottom:1px solid #aaa;">
-<td style="width:125px;height:110px;padding-left:5px;border:0px solid red;">
-<img src="{{route('images',['img'=>$pop->featured,'h'=>120,'w'=>90]) }}" height="" style="" />
-</td>
-<td class="news_list" style="padding-left:8px;top:0px;border:0px solid red;height:100px; margin:0px; ">							
-<a style="color:#03a9f4;float:left;font-weight:400;font-weight:bold;margin-top:-20px;" href="{{ route('post',['slug'=>$pop->slug])}}">{{ str_limit($pop->title,100)}}</a>					        
-</td>
-</tr>
-@endforeach
 <tr>					
 <td colspan="2">
 <center>
@@ -132,8 +112,11 @@ ga('send', 'pageview');
 </td>
 </tr>							
 </table>
-</div>	
 </div>
+</div>
+
+<!--  ============================ more  ================================================ -->
+<div class="row" style="margin:0px -15px;" id="pagination_articles_recents">
 <div class="row" style="padding:7px;margin-top:0px;border:0px solid red;">
 <div class="col-lg-12" style="margin-top:15px;">
 
