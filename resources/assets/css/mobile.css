@@ -109,7 +109,7 @@ border-radius:15px;
 
 .footer_down a{float:right;}
 
-/* ==================================== Comment ==========================================================*/
+/* ==================================== Comment ==========================================================
 .comment {border:1px solid #eee;padding:4px;}
 .comment p {
 border:1px solid #878787;
@@ -123,7 +123,7 @@ margin-bottom:0px;
 height:auto;
 }
 .comment span{margin-left:4px;margin-top:-3px;}
-.comment h2{margin-left:4px;font-size:14px;font-weight:bold;margin-top:-1px;}
+.comment h2{margin-left:4px;font-size:14px;font-weight:bold;margin-top:-1px;} */
 
 /* table styles*/
 tr .main_articles{
@@ -142,4 +142,34 @@ tr .main_articles{
 }  
 .card-2 {
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+/* comments css */
+.thumbnail {
+  padding:0px;
+}
+.panel {
+position:relative;
+}
+.panel>.panel-heading:after,.panel>.panel-heading:before{
+position:absolute;
+top:11px;left:-16px;
+right:100%;
+width:0;
+height:0;
+display:block;
+content:" ";
+border-color:transparent;
+border-style:solid solid outset;
+pointer-events:none;
+}
+.panel>.panel-heading:after{
+border-width:7px;
+border-right-color:#f7f7f7;
+margin-top:1px;
+margin-left:2px;
+}
+.panel>.panel-heading:before{
+border-right-color:#ddd;
+border-width:8px;
 }

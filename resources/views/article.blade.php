@@ -108,7 +108,49 @@ echo Carbon::parse($post->created_at)->diffForHumans();
 </div>
 <hr>
 <div class="row" style="padding:7px;">
+<div class="col-md-5">
+<div class="form-area">  
+<form role="form" method="POST" action="{{ route("comments",['id'=>$post->slug])}}">
+{{ csrf_field() }}
+<br style="clear:both">
+<h3 style="margin-bottom: 25px; text-align: center;">Andika Igitekerezo</h3>
+<div class="form-group">
+<input type="text" class="form-control" id="name" name="name" placeholder="Amazina" required>
+</div>
+<div class="form-group">
+<textarea class="form-control" type="textarea" name="message" id="message" placeholder="Igitekerezo" maxlength="140" rows="7"></textarea>
+</div>
+<input type="submit" id="submit" name="submit"  value="Ohereza" style="background-color:#03a9f4;color:#FFFFFF;" class="btn pull-right"/>
+</form>
+</div>
+</div>
+</div>
+<div class="row" style="padding:7px;">
 <div class="col-lg-12">
+<h3>Ibitekerezo</h3>
+</div><!-- /col-sm-12 -->
+</div><!-- /row -->
+
+@foreach($post->comments as $comment)
+<div class="row">
+<div class="col-sm-12">
+<div class="panel panel-default">
+<div class="panel-heading">
+<strong>{{ $comment->user }}</strong> <span class="text-muted">
+@php
+echo Carbon::parse($comment->date)->diffForHumans();
+@endphp
+</span>
+</div>
+<div class="panel-body">
+@if(isset($comment->content))
+{{ $comment->content}}
+@endif
+</div><!-- /panel-body -->
+</div><!-- /panel panel-default -->
+</div><!-- /col-sm-5 -->
+</div>
+@endforeach
 </div>
 </div>
 <div class="row" style="padding:0px 5px; background-color:#000;border:0px solid ;">

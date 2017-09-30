@@ -22,3 +22,5 @@ Route::get('post/{slug}',['as'=>'post','uses'=>'MobileWebController@getPost']);
 #smooth transition
 Route::get('cats/{catname}',['as'=>'cats','uses'=>'MobileWebController@getCategory']);
 Route::get('category/{catname}',['as'=>'cats','uses'=>'MobileWebController@getCategory']);
+
+Route::post('comment/{id}',['as'=>'comments','uses'=>'MobileWebController@postComment']);

@@ -69,4 +69,17 @@ class MobileWebController extends Controller
     return view('category')->with(['catname'=>$catname,'categories'=>$catdatas]);
    }
 
+
+   public function postComment($id,Request $request){
+    $client = new Client();
+    $res = $client->request('PUT', 'http://ktimez.com/api/comment/'.$id,['form_params' => ['user' => $request->input("name"),'content' => $request->input("message")]]);
+    if($res->getStatusCode() == 200){
+        $message = "Message successful sent";
+    }
+    else
+    {
+        $message = "Message sent failed!";
+    }
+    return redirect()->back();
+   }
 }
