@@ -29,6 +29,13 @@ ga('create', 'UA-104400261-1', 'auto');
 ga('send', 'pageview');
 </script>
 <!-- end of ga -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9325599363167347",
+    enable_page_level_ads: true
+  });
+</script>
 <style stype="text/css">
 .internal_article .puce{width:8px;height:11px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;}
 </style>
@@ -136,7 +143,11 @@ echo Carbon::parse($post->created_at)->diffForHumans();
 <div class="col-sm-12">
 <div class="panel panel-default">
 <div class="panel-heading">
-<strong>{{ $comment->user }}</strong> <span class="text-muted">
+<strong>
+@if(isset($comment->user))
+{{ $comment->user }}
+@endif
+</strong> <span class="text-muted">
 @php
 echo Carbon::parse($comment->date)->diffForHumans();
 @endphp

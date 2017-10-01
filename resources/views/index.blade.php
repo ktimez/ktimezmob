@@ -17,7 +17,13 @@ ga('create', 'UA-104400261-1', 'auto');
 ga('send', 'pageview');
 </script>
 <!-- end of ga -->
-
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9325599363167347",
+    enable_page_level_ads: true
+  });
+</script>
 </head>
 <body style="background-color:#e2e1e0;">  
 <div class="container" style="border:0px solid ;height:120px;margin-top:0px;padding:0px 0px;">
