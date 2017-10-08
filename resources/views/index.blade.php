@@ -74,12 +74,16 @@ ga('send', 'pageview');
 
 <div class="col-lg-12"  style="padding:0px;border:0px solid ;">
 <div style="overflow:hidden;">
+@if(isset($latests[0]->featured))
 <img src="{{route('images',['img'=>$latests[0]->featured])}}" width="100%"  style="height:100%" />
+@endif
 </div>
 </div>
 <div class="col-lg-12"  style="padding:0px;border:0px solid ;">   
 <div class="main_title" style="margin-top:5px;">
+@if(isset($latests[0]->slug) && isset($latests[0]->title))
 <a href="{{route('post',['slug'=>$latests[0]->slug])}}" style="font-size:16px;font-weight:bold;">{{str_limit($latests[0]->title, 100)}}</a>
+@endif
 </div>
 </div>
 </div>
@@ -95,11 +99,14 @@ ga('send', 'pageview');
  @endif
 <tr class="main_articles">
 <td style="width:105px;height:105px;padding-left:4px;border:0px solid ;">
+@if(isset($latest->featured))
 <img src="{{ route('images',['img'=>$latest->featured,'h'=>120,'w'=>90])}}" />
+@endif
 </td>
 <td class="news_list" style="padding-left:8px;top:0px;border:0px solid ;height:auto; margin:0px; ">
+@if(isset($latest->slug) && isset($latest->title))
 <a style="color:#03A9F3;float:left;font-weight:bold;margin-top:-20px;" href="{{ route('post',['slug'=>$latest->slug])}}" style="font-size:11px;">{{str_limit($latest->title, 100)}}</a>
-
+@endif
 </td>
 </tr>
 @endforeach
