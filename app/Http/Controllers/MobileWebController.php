@@ -47,8 +47,14 @@ class MobileWebController extends Controller
         $post = json_decode($res->getBody());
     }
     // print_r($post);
+    //getting related posts
+    $resrelated = $client->request('GET', 'http://ktimez.com/api/posts/related/'.$post->category[0]);
+    if($resrelated->getStatusCode() == 200){
+        $related = json_decode($resrelated->getBody());
+    }
+    // print_r($related);
     // handling not found exception
-    return view('article')->with(['post'=>$post]);
+    return view('article')->with(['post'=>$post,'related'=>$related]);
    }
    public function getCategory($catname){
     $client = new Client();

@@ -125,7 +125,7 @@ echo Carbon::parse($post->created_at)->diffForHumans();
 <input type="text" class="form-control" id="name" name="name" placeholder="Amazina" required>
 </div>
 <div class="form-group">
-<textarea class="form-control" type="textarea" name="message" id="message" placeholder="Igitekerezo" maxlength="140" rows="7"></textarea>
+<textarea class="form-control" type="textarea" name="message" id="message" placeholder="Igitekerezo" maxlength="600" rows="7"></textarea>
 </div>
 <input type="submit" id="submit" name="submit"  value="Ohereza" style="background-color:#03a9f4;color:#FFFFFF;" class="btn pull-right"/>
 </form>
@@ -162,6 +162,35 @@ echo Carbon::parse($comment->date)->diffForHumans();
 </div><!-- /col-sm-5 -->
 </div>
 @endforeach
+
+{{--   related article  --}}
+<div class="row">
+<div class="col-xs-12" style="padding:7px;background-color:#000000;">
+<h4 style="color:#fff;">Izindi Nkuru</h4>
+</div>
+</div>
+<div class="row" style="padding:2px 0px;border:0px solid red;margin-top:0px;">
+<div class="col-xs-12" style="padding:2px 15px;background-color:#fff;">		
+<div class="row" style="padding:2px 0px;border:0px solid red;margin-top:-2px;">		
+
+
+@foreach($related as $rr)
+ @if($rr->slug == $post->slug)
+      @continue
+  @endif
+<div class="col-xs-12" style="padding:3px;">
+<div class="" style="overflow:hidden;height:100px;border:0px;">
+@if(isset($rr->featured))
+<img src="{{route('images',['img'=>$rr->featured,'h'=>100,'w'=>100]) }}"/>
+@endif
+</div>
+<a href="{{$rr->slug}}" style="font-size:11px;">{{ $rr->title}}</a>
+</div>
+@endforeach
+</div>
+</div>
+</div>
+{{--  end of related article  --}}
 </div>
 </div>
 <div class="row" style="padding:0px 5px; background-color:#000;border:0px solid ;">
